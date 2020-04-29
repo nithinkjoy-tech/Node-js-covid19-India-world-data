@@ -1,0 +1,507 @@
+<body>
+  <center>
+    <h1 class="text-primary">Covid19 World</h1>
+  </center>
+  <center>
+    <h3>This is the realtime data of covid19 in the world</h3>
+  </center>
+  <form action="/india" method="GET">
+    <center><button class="btn btn-primary" type="submit">Click to View Indian data</button> </center>
+  </form><br>
+  <table class="table table-dark table-sm" border=2>
+    <thead>
+      <tr>
+        <th class="btn-primary">Confirmed</th>
+        <th class="btn-danger">Active</th>
+        <th class="btn-success">Recovered</th>
+        <th class="btn-secondary">Deceased</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="btn-primary"><%= confirmed %></td>
+        <td class="btn-danger"><%= active %></td>
+        <td class="btn-success"><%= recovered %></td>
+        <td class="btn-secondary"><%= deaths %></td>
+      </tr>
+    </tbody>
+  </table>
+  <table id='tbl' class="table table-dark table-sm" border=1>
+
+  </table>
+  <script>
+    ;
+
+    function addCell1(tr, val) {
+      var td = document.createElement('td');
+
+      td.innerHTML = val;
+
+      tr.appendChild(td)
+    }
+
+    function addCell2(tr, val) {
+      var td = document.createElement('td');
+      td.className = "btn-primary"
+
+      td.innerHTML = val;
+
+      tr.appendChild(td)
+    }
+
+    function addCell3(tr, val) {
+      var td = document.createElement('td');
+      td.className = "btn-danger"
+
+      td.innerHTML = val;
+
+      tr.appendChild(td)
+    }
+
+    function addCell4(tr, val) {
+      var td = document.createElement('td');
+      td.className = "btn-success"
+
+      td.innerHTML = val;
+
+      tr.appendChild(td)
+    }
+
+    function addCell5(tr, val) {
+      var td = document.createElement('td');
+      td.className = "btn-secondary"
+      td.innerHTML = val;
+      tr.appendChild(td)
+    }
+
+    function addHdrCell1(tr, val) {
+      var th = document.createElement('th');
+      th.innerHTML = val;
+      tr.appendChild(th)
+    }
+
+    function addHdrCell2(tr, val) {
+      var th = document.createElement('th');
+      th.className = "btn-primary"
+      th.innerHTML = val;
+      tr.appendChild(th)
+    }
+
+    function addHdrCell3(tr, val) {
+      var th = document.createElement('th');
+      th.className = "btn-danger"
+      th.innerHTML = val;
+      tr.appendChild(th)
+    }
+
+    function addHdrCell4(tr, val) {
+      var th = document.createElement('th');
+      th.className = "btn-success"
+      th.innerHTML = val;
+      tr.appendChild(th)
+    }
+
+    function addHdrCell5(tr, val) {
+      var th = document.createElement('th');
+      th.className = "btn-secondary"
+      th.innerHTML = val;
+      tr.appendChild(th)
+    }
+
+    function addHeader(tbl, countries, val_1, val_2, val_3, val_4) {
+      var tr = document.createElement('tr');
+      addHdrCell1(tr, countries)
+      addHdrCell2(tr, val_1);
+      addHdrCell3(tr, val_2);
+      addHdrCell4(tr, val_3);
+      addHdrCell5(tr, val_4);
+      tbl.appendChild(tr)
+    }
+
+    function addRow(tbl, countries, val_1, val_2, val_3, val_4) {
+      var tr = document.createElement('tr');
+      addCell1(tr, countries)
+      addCell2(tr, val_1);
+      addCell3(tr, val_2);
+      addCell4(tr, val_3);
+      addCell5(tr, val_4);
+      tbl.appendChild(tr)
+    }
+
+    (function main() {
+      tbl = document.getElementById('tbl')
+      addHeader(tbl, 'countries', 'confi', 'act', 'reco', 'deaths');
+      addRow(tbl, "<%= countryName[0] %>", "<%= countryConfirmed[0] %>", "<%= countryActive[0] %>",
+        "<%= countryRecovered[0] %>", "<%= countryDeaths[0] %>");
+      addRow(tbl, "<%= countryName[1] %>", "<%= countryConfirmed[1] %>", "<%= countryActive[1] %>",
+        "<%= countryRecovered[1] %>", "<%= countryDeaths[1] %>");
+      addRow(tbl, "<%= countryName[2] %>", "<%= countryConfirmed[2] %>", "<%= countryActive[2] %>",
+        "<%= countryRecovered[2] %>", "<%= countryDeaths[2] %>");
+      addRow(tbl, "<%= countryName[3] %>", "<%= countryConfirmed[3] %>", "<%= countryActive[3] %>",
+        "<%= countryRecovered[3] %>", "<%= countryDeaths[3] %>");
+      addRow(tbl, "<%= countryName[4] %>", "<%= countryConfirmed[4] %>", "<%= countryActive[4] %>",
+        "<%= countryRecovered[4] %>", "<%= countryDeaths[4] %>");
+      addRow(tbl, "<%= countryName[5] %>", "<%= countryConfirmed[5] %>", "<%= countryActive[5] %>",
+        "<%= countryRecovered[5] %>", "<%= countryDeaths[5] %>");
+      addRow(tbl, "<%= countryName[6] %>", "<%= countryConfirmed[6] %>", "<%= countryActive[6] %>",
+        "<%= countryRecovered[6] %>", "<%= countryDeaths[6] %>");
+      addRow(tbl, "<%= countryName[7] %>", "<%= countryConfirmed[7] %>", "<%= countryActive[7] %>",
+        "<%= countryRecovered[7] %>", "<%= countryDeaths[7] %>");
+      addRow(tbl, "<%= countryName[8] %>", "<%= countryConfirmed[8] %>", "<%= countryActive[8] %>",
+        "<%= countryRecovered[8] %>", "<%= countryDeaths[8] %>");
+      addRow(tbl, "<%= countryName[9] %>", "<%= countryConfirmed[9] %>", "<%= countryActive[9] %>",
+        "<%= countryRecovered[9] %>", "<%= countryDeaths[9] %>");
+      addRow(tbl, "<%= countryName[10] %>", "<%= countryConfirmed[10] %>", "<%= countryActive[10] %>",
+        "<%= countryRecovered[10] %>", "<%= countryDeaths[10] %>");
+      addRow(tbl, "<%= countryName[11] %>", "<%= countryConfirmed[11] %>", "<%= countryActive[11] %>",
+        "<%= countryRecovered[11] %>", "<%= countryDeaths[11] %>");
+      addRow(tbl, "<%= countryName[12] %>", "<%= countryConfirmed[12] %>", "<%= countryActive[12] %>",
+        "<%= countryRecovered[12] %>", "<%= countryDeaths[12] %>");
+      addRow(tbl, "<%= countryName[13] %>", "<%= countryConfirmed[13] %>", "<%= countryActive[13] %>",
+        "<%= countryRecovered[13] %>", "<%= countryDeaths[13] %>");
+      addRow(tbl, "<%= countryName[14] %>", "<%= countryConfirmed[14] %>", "<%= countryActive[14] %>",
+        "<%= countryRecovered[14] %>", "<%= countryDeaths[14] %>");
+      addRow(tbl, "<%= countryName[15] %>", "<%= countryConfirmed[15] %>", "<%= countryActive[15] %>",
+        "<%= countryRecovered[15] %>", "<%= countryDeaths[15] %>");
+      addRow(tbl, "<%= countryName[16] %>", "<%= countryConfirmed[16] %>", "<%= countryActive[16] %>",
+        "<%= countryRecovered[16] %>", "<%= countryDeaths[16] %>");
+      addRow(tbl, "<%= countryName[17] %>", "<%= countryConfirmed[17] %>", "<%= countryActive[17] %>",
+        "<%= countryRecovered[17] %>", "<%= countryDeaths[17] %>");
+      addRow(tbl, "<%= countryName[18] %>", "<%= countryConfirmed[18] %>", "<%= countryActive[18] %>",
+        "<%= countryRecovered[18] %>", "<%= countryDeaths[18] %>");
+      addRow(tbl, "<%= countryName[19] %>", "<%= countryConfirmed[19] %>", "<%= countryActive[19] %>",
+        "<%= countryRecovered[19] %>", "<%= countryDeaths[19] %>");
+      addRow(tbl, "<%= countryName[20] %>", "<%= countryConfirmed[20] %>", "<%= countryActive[20] %>",
+        "<%= countryRecovered[20] %>", "<%= countryDeaths[20] %>");
+      addRow(tbl, "<%= countryName[21] %>", "<%= countryConfirmed[21] %>", "<%= countryActive[21] %>",
+        "<%= countryRecovered[21] %>", "<%= countryDeaths[21] %>");
+      addRow(tbl, "<%= countryName[22] %>", "<%= countryConfirmed[22] %>", "<%= countryActive[22] %>",
+        "<%= countryRecovered[22] %>", "<%= countryDeaths[22] %>");
+      addRow(tbl, "<%= countryName[23] %>", "<%= countryConfirmed[23] %>", "<%= countryActive[23] %>",
+        "<%= countryRecovered[23] %>", "<%= countryDeaths[23] %>");
+      addRow(tbl, "<%= countryName[24] %>", "<%= countryConfirmed[24] %>", "<%= countryActive[24] %>",
+        "<%= countryRecovered[24] %>", "<%= countryDeaths[24] %>");
+      addRow(tbl, "<%= countryName[25] %>", "<%= countryConfirmed[25] %>", "<%= countryActive[25] %>",
+        "<%= countryRecovered[25] %>", "<%= countryDeaths[25] %>");
+      addRow(tbl, "<%= countryName[26] %>", "<%= countryConfirmed[26] %>", "<%= countryActive[26] %>",
+        "<%= countryRecovered[26] %>", "<%= countryDeaths[26] %>");
+      addRow(tbl, "<%= countryName[27] %>", "<%= countryConfirmed[27] %>", "<%= countryActive[27] %>",
+        "<%= countryRecovered[27] %>", "<%= countryDeaths[27] %>");
+      addRow(tbl, "<%= countryName[28] %>", "<%= countryConfirmed[28] %>", "<%= countryActive[28] %>",
+        "<%= countryRecovered[28] %>", "<%= countryDeaths[28] %>");
+      addRow(tbl, "<%= countryName[29] %>", "<%= countryConfirmed[29] %>", "<%= countryActive[29] %>",
+        "<%= countryRecovered[29] %>", "<%= countryDeaths[29] %>");
+      addRow(tbl, "<%= countryName[30] %>", "<%= countryConfirmed[30] %>", "<%= countryActive[30] %>",
+        "<%= countryRecovered[30] %>", "<%= countryDeaths[30] %>");
+      addRow(tbl, "<%= countryName[31] %>", "<%= countryConfirmed[31] %>", "<%= countryActive[31] %>",
+        "<%= countryRecovered[31] %>", "<%= countryDeaths[31] %>");
+      addRow(tbl, "<%= countryName[32] %>", "<%= countryConfirmed[32] %>", "<%= countryActive[32] %>",
+        "<%= countryRecovered[32] %>", "<%= countryDeaths[32] %>");
+      addRow(tbl, "<%= countryName[33] %>", "<%= countryConfirmed[33] %>", "<%= countryActive[33] %>",
+        "<%= countryRecovered[33] %>", "<%= countryDeaths[33] %>");
+      addRow(tbl, "<%= countryName[34] %>", "<%= countryConfirmed[34] %>", "<%= countryActive[34] %>",
+        "<%= countryRecovered[34] %>", "<%= countryDeaths[34] %>");
+      addRow(tbl, "<%= countryName[35] %>", "<%= countryConfirmed[35] %>", "<%= countryActive[35] %>",
+        "<%= countryRecovered[35] %>", "<%= countryDeaths[35] %>");
+      addRow(tbl, "<%= countryName[36] %>", "<%= countryConfirmed[36] %>", "<%= countryActive[36] %>",
+        "<%= countryRecovered[36] %>", "<%= countryDeaths[36] %>");
+      addRow(tbl, "<%= countryName[37] %>", "<%= countryConfirmed[37] %>", "<%= countryActive[37] %>",
+        "<%= countryRecovered[37] %>", "<%= countryDeaths[37] %>");
+      addRow(tbl, "<%= countryName[38] %>", "<%= countryConfirmed[38] %>", "<%= countryActive[38] %>",
+        "<%= countryRecovered[38] %>", "<%= countryDeaths[38] %>");
+      addRow(tbl, "<%= countryName[39] %>", "<%= countryConfirmed[39] %>", "<%= countryActive[39] %>",
+        "<%= countryRecovered[39] %>", "<%= countryDeaths[39] %>");
+      addRow(tbl, "<%= countryName[40] %>", "<%= countryConfirmed[40] %>", "<%= countryActive[40] %>",
+        "<%= countryRecovered[40] %>", "<%= countryDeaths[40] %>");
+      addRow(tbl, "<%= countryName[41] %>", "<%= countryConfirmed[41] %>", "<%= countryActive[41] %>",
+        "<%= countryRecovered[41] %>", "<%= countryDeaths[41] %>");
+      addRow(tbl, "<%= countryName[42] %>", "<%= countryConfirmed[42] %>", "<%= countryActive[42] %>",
+        "<%= countryRecovered[42] %>", "<%= countryDeaths[42] %>");
+      addRow(tbl, "<%= countryName[43] %>", "<%= countryConfirmed[43] %>", "<%= countryActive[43] %>",
+        "<%= countryRecovered[43] %>", "<%= countryDeaths[43] %>");
+      addRow(tbl, "<%= countryName[44] %>", "<%= countryConfirmed[44] %>", "<%= countryActive[44] %>",
+        "<%= countryRecovered[44] %>", "<%= countryDeaths[44] %>");
+      addRow(tbl, "<%= countryName[45] %>", "<%= countryConfirmed[45] %>", "<%= countryActive[45] %>",
+        "<%= countryRecovered[45] %>", "<%= countryDeaths[45] %>");
+      addRow(tbl, "<%= countryName[46] %>", "<%= countryConfirmed[46] %>", "<%= countryActive[46] %>",
+        "<%= countryRecovered[46] %>", "<%= countryDeaths[46] %>");
+      addRow(tbl, "<%= countryName[47] %>", "<%= countryConfirmed[47] %>", "<%= countryActive[47] %>",
+        "<%= countryRecovered[47] %>", "<%= countryDeaths[47] %>");
+      addRow(tbl, "<%= countryName[48] %>", "<%= countryConfirmed[48] %>", "<%= countryActive[48] %>",
+        "<%= countryRecovered[48] %>", "<%= countryDeaths[48] %>");
+      addRow(tbl, "<%= countryName[49] %>", "<%= countryConfirmed[49] %>", "<%= countryActive[49] %>",
+        "<%= countryRecovered[49] %>", "<%= countryDeaths[49] %>");
+      addRow(tbl, "<%= countryName[50] %>", "<%= countryConfirmed[50] %>", "<%= countryActive[50] %>",
+        "<%= countryRecovered[50] %>", "<%= countryDeaths[50] %>");
+      addRow(tbl, "<%= countryName[51] %>", "<%= countryConfirmed[51] %>", "<%= countryActive[51] %>",
+        "<%= countryRecovered[51] %>", "<%= countryDeaths[51] %>");
+      addRow(tbl, "<%= countryName[52] %>", "<%= countryConfirmed[52] %>", "<%= countryActive[52] %>",
+        "<%= countryRecovered[52] %>", "<%= countryDeaths[52] %>");
+      addRow(tbl, "<%= countryName[53] %>", "<%= countryConfirmed[53] %>", "<%= countryActive[53] %>",
+        "<%= countryRecovered[53] %>", "<%= countryDeaths[53] %>");
+      addRow(tbl, "<%= countryName[54] %>", "<%= countryConfirmed[54] %>", "<%= countryActive[54] %>",
+        "<%= countryRecovered[54] %>", "<%= countryDeaths[54] %>");
+      addRow(tbl, "<%= countryName[55] %>", "<%= countryConfirmed[55] %>", "<%= countryActive[55] %>",
+        "<%= countryRecovered[55] %>", "<%= countryDeaths[55] %>");
+      addRow(tbl, "<%= countryName[56] %>", "<%= countryConfirmed[56] %>", "<%= countryActive[56] %>",
+        "<%= countryRecovered[56] %>", "<%= countryDeaths[56] %>");
+      addRow(tbl, "<%= countryName[57] %>", "<%= countryConfirmed[57] %>", "<%= countryActive[57] %>",
+        "<%= countryRecovered[57] %>", "<%= countryDeaths[57] %>");
+      addRow(tbl, "<%= countryName[58] %>", "<%= countryConfirmed[58] %>", "<%= countryActive[58] %>",
+        "<%= countryRecovered[58] %>", "<%= countryDeaths[58] %>");
+      addRow(tbl, "<%= countryName[59] %>", "<%= countryConfirmed[59] %>", "<%= countryActive[59] %>",
+        "<%= countryRecovered[59] %>", "<%= countryDeaths[59] %>");
+      addRow(tbl, "<%= countryName[60] %>", "<%= countryConfirmed[60] %>", "<%= countryActive[60] %>",
+        "<%= countryRecovered[60] %>", "<%= countryDeaths[60] %>");
+      addRow(tbl, "<%= countryName[61] %>", "<%= countryConfirmed[61] %>", "<%= countryActive[61] %>",
+        "<%= countryRecovered[61] %>", "<%= countryDeaths[61] %>");
+      addRow(tbl, "<%= countryName[62] %>", "<%= countryConfirmed[62] %>", "<%= countryActive[62] %>",
+        "<%= countryRecovered[62] %>", "<%= countryDeaths[62] %>");
+      addRow(tbl, "<%= countryName[63] %>", "<%= countryConfirmed[63] %>", "<%= countryActive[63] %>",
+        "<%= countryRecovered[63] %>", "<%= countryDeaths[63] %>");
+      addRow(tbl, "<%= countryName[64] %>", "<%= countryConfirmed[64] %>", "<%= countryActive[64] %>",
+        "<%= countryRecovered[64] %>", "<%= countryDeaths[64] %>");
+      addRow(tbl, "<%= countryName[65] %>", "<%= countryConfirmed[65] %>", "<%= countryActive[65] %>",
+        "<%= countryRecovered[65] %>", "<%= countryDeaths[65] %>");
+      addRow(tbl, "<%= countryName[66] %>", "<%= countryConfirmed[66] %>", "<%= countryActive[66] %>",
+        "<%= countryRecovered[66] %>", "<%= countryDeaths[66] %>");
+      addRow(tbl, "<%= countryName[67] %>", "<%= countryConfirmed[67] %>", "<%= countryActive[67] %>",
+        "<%= countryRecovered[67] %>", "<%= countryDeaths[67] %>");
+      addRow(tbl, "<%= countryName[68] %>", "<%= countryConfirmed[68] %>", "<%= countryActive[68] %>",
+        "<%= countryRecovered[68] %>", "<%= countryDeaths[68] %>");
+      addRow(tbl, "<%= countryName[69] %>", "<%= countryConfirmed[69] %>", "<%= countryActive[69] %>",
+        "<%= countryRecovered[69] %>", "<%= countryDeaths[69] %>");
+      addRow(tbl, "<%= countryName[70] %>", "<%= countryConfirmed[70] %>", "<%= countryActive[70] %>",
+        "<%= countryRecovered[70] %>", "<%= countryDeaths[70] %>");
+      addRow(tbl, "<%= countryName[71] %>", "<%= countryConfirmed[71] %>", "<%= countryActive[71] %>",
+        "<%= countryRecovered[71] %>", "<%= countryDeaths[71] %>");
+      addRow(tbl, "<%= countryName[72] %>", "<%= countryConfirmed[72] %>", "<%= countryActive[72] %>",
+        "<%= countryRecovered[72] %>", "<%= countryDeaths[72] %>");
+      addRow(tbl, "<%= countryName[73] %>", "<%= countryConfirmed[73] %>", "<%= countryActive[73] %>",
+        "<%= countryRecovered[73] %>", "<%= countryDeaths[73] %>");
+      addRow(tbl, "<%= countryName[74] %>", "<%= countryConfirmed[74] %>", "<%= countryActive[74] %>",
+        "<%= countryRecovered[74] %>", "<%= countryDeaths[74] %>");
+      addRow(tbl, "<%= countryName[75] %>", "<%= countryConfirmed[75] %>", "<%= countryActive[75] %>",
+        "<%= countryRecovered[75] %>", "<%= countryDeaths[75] %>");
+      addRow(tbl, "<%= countryName[76] %>", "<%= countryConfirmed[76] %>", "<%= countryActive[76] %>",
+        "<%= countryRecovered[76] %>", "<%= countryDeaths[76] %>");
+      addRow(tbl, "<%= countryName[77] %>", "<%= countryConfirmed[77] %>", "<%= countryActive[77] %>",
+        "<%= countryRecovered[77] %>", "<%= countryDeaths[77] %>");
+      addRow(tbl, "<%= countryName[78] %>", "<%= countryConfirmed[78] %>", "<%= countryActive[78] %>",
+        "<%= countryRecovered[78] %>", "<%= countryDeaths[78] %>");
+      addRow(tbl, "<%= countryName[79] %>", "<%= countryConfirmed[79] %>", "<%= countryActive[79] %>",
+        "<%= countryRecovered[79] %>", "<%= countryDeaths[79] %>");
+      addRow(tbl, "<%= countryName[80] %>", "<%= countryConfirmed[80] %>", "<%= countryActive[80] %>",
+        "<%= countryRecovered[80] %>", "<%= countryDeaths[80] %>");
+      addRow(tbl, "<%= countryName[81] %>", "<%= countryConfirmed[81] %>", "<%= countryActive[81] %>",
+        "<%= countryRecovered[81] %>", "<%= countryDeaths[81] %>");
+      addRow(tbl, "<%= countryName[82] %>", "<%= countryConfirmed[82] %>", "<%= countryActive[82] %>",
+        "<%= countryRecovered[82] %>", "<%= countryDeaths[82] %>");
+      addRow(tbl, "<%= countryName[83] %>", "<%= countryConfirmed[83] %>", "<%= countryActive[83] %>",
+        "<%= countryRecovered[83] %>", "<%= countryDeaths[83] %>");
+      addRow(tbl, "<%= countryName[84] %>", "<%= countryConfirmed[84] %>", "<%= countryActive[84] %>",
+        "<%= countryRecovered[84] %>", "<%= countryDeaths[84] %>");
+      addRow(tbl, "<%= countryName[85] %>", "<%= countryConfirmed[85] %>", "<%= countryActive[85] %>",
+        "<%= countryRecovered[85] %>", "<%= countryDeaths[85] %>");
+      addRow(tbl, "<%= countryName[86] %>", "<%= countryConfirmed[86] %>", "<%= countryActive[86] %>",
+        "<%= countryRecovered[86] %>", "<%= countryDeaths[86] %>");
+      addRow(tbl, "<%= countryName[87] %>", "<%= countryConfirmed[87] %>", "<%= countryActive[87] %>",
+        "<%= countryRecovered[87] %>", "<%= countryDeaths[87] %>");
+      addRow(tbl, "<%= countryName[88] %>", "<%= countryConfirmed[88] %>", "<%= countryActive[88] %>",
+        "<%= countryRecovered[88] %>", "<%= countryDeaths[88] %>");
+      addRow(tbl, "<%= countryName[89] %>", "<%= countryConfirmed[89] %>", "<%= countryActive[89] %>",
+        "<%= countryRecovered[89] %>", "<%= countryDeaths[89] %>");
+      addRow(tbl, "<%= countryName[90] %>", "<%= countryConfirmed[90] %>", "<%= countryActive[90] %>",
+        "<%= countryRecovered[90] %>", "<%= countryDeaths[90] %>");
+      addRow(tbl, "<%= countryName[91] %>", "<%= countryConfirmed[91] %>", "<%= countryActive[91] %>",
+        "<%= countryRecovered[91] %>", "<%= countryDeaths[91] %>");
+      addRow(tbl, "<%= countryName[92] %>", "<%= countryConfirmed[92] %>", "<%= countryActive[92] %>",
+        "<%= countryRecovered[92] %>", "<%= countryDeaths[92] %>");
+      addRow(tbl, "<%= countryName[93] %>", "<%= countryConfirmed[93] %>", "<%= countryActive[93] %>",
+        "<%= countryRecovered[93] %>", "<%= countryDeaths[93] %>");
+      addRow(tbl, "<%= countryName[94] %>", "<%= countryConfirmed[94] %>", "<%= countryActive[94] %>",
+        "<%= countryRecovered[94] %>", "<%= countryDeaths[94] %>");
+      addRow(tbl, "<%= countryName[95] %>", "<%= countryConfirmed[95] %>", "<%= countryActive[95] %>",
+        "<%= countryRecovered[95] %>", "<%= countryDeaths[95] %>");
+      addRow(tbl, "<%= countryName[96] %>", "<%= countryConfirmed[96] %>", "<%= countryActive[96] %>",
+        "<%= countryRecovered[96] %>", "<%= countryDeaths[96] %>");
+      addRow(tbl, "<%= countryName[97] %>", "<%= countryConfirmed[97] %>", "<%= countryActive[97] %>",
+        "<%= countryRecovered[97] %>", "<%= countryDeaths[97] %>");
+      addRow(tbl, "<%= countryName[98] %>", "<%= countryConfirmed[98] %>", "<%= countryActive[98] %>",
+        "<%= countryRecovered[98] %>", "<%= countryDeaths[98] %>");
+      addRow(tbl, "<%= countryName[99] %>", "<%= countryConfirmed[99] %>", "<%= countryActive[99] %>",
+        "<%= countryRecovered[99] %>", "<%= countryDeaths[99] %>");
+      addRow(tbl, "<%= countryName[100] %>", "<%= countryConfirmed[100] %>", "<%= countryActive[100] %>",
+        "<%= countryRecovered[100] %>", "<%= countryDeaths[100] %>");
+      addRow(tbl, "<%= countryName[101] %>", "<%= countryConfirmed[101] %>", "<%= countryActive[101] %>",
+        "<%= countryRecovered[101] %>", "<%= countryDeaths[101] %>");
+      addRow(tbl, "<%= countryName[102] %>", "<%= countryConfirmed[102] %>", "<%= countryActive[102] %>",
+        "<%= countryRecovered[102] %>", "<%= countryDeaths[102] %>");
+      addRow(tbl, "<%= countryName[103] %>", "<%= countryConfirmed[103] %>", "<%= countryActive[103] %>",
+        "<%= countryRecovered[103] %>", "<%= countryDeaths[103] %>");
+      addRow(tbl, "<%= countryName[104] %>", "<%= countryConfirmed[104] %>", "<%= countryActive[104] %>",
+        "<%= countryRecovered[104] %>", "<%= countryDeaths[104] %>");
+      addRow(tbl, "<%= countryName[105] %>", "<%= countryConfirmed[105] %>", "<%= countryActive[105] %>",
+        "<%= countryRecovered[105] %>", "<%= countryDeaths[105] %>");
+      addRow(tbl, "<%= countryName[106] %>", "<%= countryConfirmed[106] %>", "<%= countryActive[106] %>",
+        "<%= countryRecovered[106] %>", "<%= countryDeaths[106] %>");
+      addRow(tbl, "<%= countryName[107] %>", "<%= countryConfirmed[107] %>", "<%= countryActive[107] %>",
+        "<%= countryRecovered[107] %>", "<%= countryDeaths[107] %>");
+      addRow(tbl, "<%= countryName[108] %>", "<%= countryConfirmed[108] %>", "<%= countryActive[108] %>",
+        "<%= countryRecovered[108] %>", "<%= countryDeaths[108] %>");
+      addRow(tbl, "<%= countryName[109] %>", "<%= countryConfirmed[109] %>", "<%= countryActive[109] %>",
+        "<%= countryRecovered[109] %>", "<%= countryDeaths[109] %>");
+      addRow(tbl, "<%= countryName[110] %>", "<%= countryConfirmed[110] %>", "<%= countryActive[110] %>",
+        "<%= countryRecovered[110] %>", "<%= countryDeaths[110] %>");
+      addRow(tbl, "<%= countryName[111] %>", "<%= countryConfirmed[111] %>", "<%= countryActive[111] %>",
+        "<%= countryRecovered[111] %>", "<%= countryDeaths[111] %>");
+      addRow(tbl, "<%= countryName[112] %>", "<%= countryConfirmed[112] %>", "<%= countryActive[112] %>",
+        "<%= countryRecovered[112] %>", "<%= countryDeaths[112] %>");
+      addRow(tbl, "<%= countryName[113] %>", "<%= countryConfirmed[113] %>", "<%= countryActive[113] %>",
+        "<%= countryRecovered[113] %>", "<%= countryDeaths[113] %>");
+      addRow(tbl, "<%= countryName[114] %>", "<%= countryConfirmed[114] %>", "<%= countryActive[114] %>",
+        "<%= countryRecovered[114] %>", "<%= countryDeaths[114] %>");
+      addRow(tbl, "<%= countryName[115] %>", "<%= countryConfirmed[115] %>", "<%= countryActive[115] %>",
+        "<%= countryRecovered[115] %>", "<%= countryDeaths[115] %>");
+      addRow(tbl, "<%= countryName[116] %>", "<%= countryConfirmed[116] %>", "<%= countryActive[116] %>",
+        "<%= countryRecovered[116] %>", "<%= countryDeaths[116] %>");
+      addRow(tbl, "<%= countryName[117] %>", "<%= countryConfirmed[117] %>", "<%= countryActive[117] %>",
+        "<%= countryRecovered[117] %>", "<%= countryDeaths[117] %>");
+      addRow(tbl, "<%= countryName[118] %>", "<%= countryConfirmed[118] %>", "<%= countryActive[118] %>",
+        "<%= countryRecovered[118] %>", "<%= countryDeaths[118] %>");
+      addRow(tbl, "<%= countryName[119] %>", "<%= countryConfirmed[119] %>", "<%= countryActive[119] %>",
+        "<%= countryRecovered[119] %>", "<%= countryDeaths[119] %>");
+      addRow(tbl, "<%= countryName[120] %>", "<%= countryConfirmed[120] %>", "<%= countryActive[120] %>",
+        "<%= countryRecovered[120] %>", "<%= countryDeaths[120] %>");
+      addRow(tbl, "<%= countryName[121] %>", "<%= countryConfirmed[121] %>", "<%= countryActive[121] %>",
+        "<%= countryRecovered[121] %>", "<%= countryDeaths[121] %>");
+      addRow(tbl, "<%= countryName[122] %>", "<%= countryConfirmed[122] %>", "<%= countryActive[122] %>",
+        "<%= countryRecovered[122] %>", "<%= countryDeaths[122] %>");
+      addRow(tbl, "<%= countryName[123] %>", "<%= countryConfirmed[123] %>", "<%= countryActive[123] %>",
+        "<%= countryRecovered[123] %>", "<%= countryDeaths[123] %>");
+      addRow(tbl, "<%= countryName[124] %>", "<%= countryConfirmed[124] %>", "<%= countryActive[124] %>",
+        "<%= countryRecovered[124] %>", "<%= countryDeaths[124] %>");
+      addRow(tbl, "<%= countryName[125] %>", "<%= countryConfirmed[125] %>", "<%= countryActive[125] %>",
+        "<%= countryRecovered[125] %>", "<%= countryDeaths[125] %>");
+      addRow(tbl, "<%= countryName[126] %>", "<%= countryConfirmed[126] %>", "<%= countryActive[126] %>",
+        "<%= countryRecovered[126] %>", "<%= countryDeaths[126] %>");
+      addRow(tbl, "<%= countryName[127] %>", "<%= countryConfirmed[127] %>", "<%= countryActive[127] %>",
+        "<%= countryRecovered[127] %>", "<%= countryDeaths[127] %>");
+      addRow(tbl, "<%= countryName[128] %>", "<%= countryConfirmed[128] %>", "<%= countryActive[128] %>",
+        "<%= countryRecovered[128] %>", "<%= countryDeaths[128] %>");
+      addRow(tbl, "<%= countryName[129] %>", "<%= countryConfirmed[129] %>", "<%= countryActive[129] %>",
+        "<%= countryRecovered[129] %>", "<%= countryDeaths[129] %>");
+      addRow(tbl, "<%= countryName[130] %>", "<%= countryConfirmed[130] %>", "<%= countryActive[130] %>",
+        "<%= countryRecovered[130] %>", "<%= countryDeaths[130] %>");
+      addRow(tbl, "<%= countryName[131] %>", "<%= countryConfirmed[131] %>", "<%= countryActive[131] %>",
+        "<%= countryRecovered[131] %>", "<%= countryDeaths[131] %>");
+      addRow(tbl, "<%= countryName[132] %>", "<%= countryConfirmed[132] %>", "<%= countryActive[132] %>",
+        "<%= countryRecovered[132] %>", "<%= countryDeaths[132] %>");
+      addRow(tbl, "<%= countryName[133] %>", "<%= countryConfirmed[133] %>", "<%= countryActive[133] %>",
+        "<%= countryRecovered[133] %>", "<%= countryDeaths[133] %>");
+      addRow(tbl, "<%= countryName[134] %>", "<%= countryConfirmed[134] %>", "<%= countryActive[134] %>",
+        "<%= countryRecovered[134] %>", "<%= countryDeaths[134] %>");
+      addRow(tbl, "<%= countryName[135] %>", "<%= countryConfirmed[135] %>", "<%= countryActive[135] %>",
+        "<%= countryRecovered[135] %>", "<%= countryDeaths[135] %>");
+      addRow(tbl, "<%= countryName[136] %>", "<%= countryConfirmed[136] %>", "<%= countryActive[136] %>",
+        "<%= countryRecovered[136] %>", "<%= countryDeaths[136] %>");
+      addRow(tbl, "<%= countryName[137] %>", "<%= countryConfirmed[137] %>", "<%= countryActive[137] %>",
+        "<%= countryRecovered[137] %>", "<%= countryDeaths[137] %>");
+      addRow(tbl, "<%= countryName[138] %>", "<%= countryConfirmed[138] %>", "<%= countryActive[138] %>",
+        "<%= countryRecovered[138] %>", "<%= countryDeaths[138] %>");
+      addRow(tbl, "<%= countryName[139] %>", "<%= countryConfirmed[139] %>", "<%= countryActive[139] %>",
+        "<%= countryRecovered[139] %>", "<%= countryDeaths[139] %>");
+      addRow(tbl, "<%= countryName[140] %>", "<%= countryConfirmed[140] %>", "<%= countryActive[140] %>",
+        "<%= countryRecovered[140] %>", "<%= countryDeaths[140] %>");
+      addRow(tbl, "<%= countryName[141] %>", "<%= countryConfirmed[141] %>", "<%= countryActive[141] %>",
+        "<%= countryRecovered[141] %>", "<%= countryDeaths[141] %>");
+      addRow(tbl, "<%= countryName[142] %>", "<%= countryConfirmed[142] %>", "<%= countryActive[142] %>",
+        "<%= countryRecovered[142] %>", "<%= countryDeaths[142] %>");
+      addRow(tbl, "<%= countryName[143] %>", "<%= countryConfirmed[143] %>", "<%= countryActive[143] %>",
+        "<%= countryRecovered[143] %>", "<%= countryDeaths[143] %>");
+      addRow(tbl, "<%= countryName[144] %>", "<%= countryConfirmed[144] %>", "<%= countryActive[144] %>",
+        "<%= countryRecovered[144] %>", "<%= countryDeaths[144] %>");
+      addRow(tbl, "<%= countryName[145] %>", "<%= countryConfirmed[145] %>", "<%= countryActive[145] %>",
+        "<%= countryRecovered[145] %>", "<%= countryDeaths[145] %>");
+      addRow(tbl, "<%= countryName[146] %>", "<%= countryConfirmed[146] %>", "<%= countryActive[146] %>",
+        "<%= countryRecovered[146] %>", "<%= countryDeaths[146] %>");
+      addRow(tbl, "<%= countryName[147] %>", "<%= countryConfirmed[147] %>", "<%= countryActive[147] %>",
+        "<%= countryRecovered[147] %>", "<%= countryDeaths[147] %>");
+      addRow(tbl, "<%= countryName[148] %>", "<%= countryConfirmed[148] %>", "<%= countryActive[148] %>",
+        "<%= countryRecovered[148] %>", "<%= countryDeaths[148] %>");
+      addRow(tbl, "<%= countryName[149] %>", "<%= countryConfirmed[149] %>", "<%= countryActive[149] %>",
+        "<%= countryRecovered[149] %>", "<%= countryDeaths[149] %>");
+      addRow(tbl, "<%= countryName[150] %>", "<%= countryConfirmed[150] %>", "<%= countryActive[150] %>",
+        "<%= countryRecovered[150] %>", "<%= countryDeaths[150] %>");
+      addRow(tbl, "<%= countryName[151] %>", "<%= countryConfirmed[151] %>", "<%= countryActive[151] %>",
+        "<%= countryRecovered[151] %>", "<%= countryDeaths[151] %>");
+      addRow(tbl, "<%= countryName[152] %>", "<%= countryConfirmed[152] %>", "<%= countryActive[152] %>",
+        "<%= countryRecovered[152] %>", "<%= countryDeaths[152] %>");
+      addRow(tbl, "<%= countryName[153] %>", "<%= countryConfirmed[153] %>", "<%= countryActive[153] %>",
+        "<%= countryRecovered[153] %>", "<%= countryDeaths[153] %>");
+      addRow(tbl, "<%= countryName[154] %>", "<%= countryConfirmed[154] %>", "<%= countryActive[154] %>",
+        "<%= countryRecovered[154] %>", "<%= countryDeaths[154] %>");
+      addRow(tbl, "<%= countryName[155] %>", "<%= countryConfirmed[155] %>", "<%= countryActive[155] %>",
+        "<%= countryRecovered[155] %>", "<%= countryDeaths[155] %>");
+      addRow(tbl, "<%= countryName[156] %>", "<%= countryConfirmed[156] %>", "<%= countryActive[156] %>",
+        "<%= countryRecovered[156] %>", "<%= countryDeaths[156] %>");
+      addRow(tbl, "<%= countryName[157] %>", "<%= countryConfirmed[157] %>", "<%= countryActive[157] %>",
+        "<%= countryRecovered[157] %>", "<%= countryDeaths[157] %>");
+      addRow(tbl, "<%= countryName[158] %>", "<%= countryConfirmed[158] %>", "<%= countryActive[158] %>",
+        "<%= countryRecovered[158] %>", "<%= countryDeaths[158] %>");
+      addRow(tbl, "<%= countryName[159] %>", "<%= countryConfirmed[159] %>", "<%= countryActive[159] %>",
+        "<%= countryRecovered[159] %>", "<%= countryDeaths[159] %>");
+      addRow(tbl, "<%= countryName[160] %>", "<%= countryConfirmed[160] %>", "<%= countryActive[160] %>",
+        "<%= countryRecovered[160] %>", "<%= countryDeaths[160] %>");
+      addRow(tbl, "<%= countryName[161] %>", "<%= countryConfirmed[161] %>", "<%= countryActive[161] %>",
+        "<%= countryRecovered[161] %>", "<%= countryDeaths[161] %>");
+      addRow(tbl, "<%= countryName[162] %>", "<%= countryConfirmed[162] %>", "<%= countryActive[162] %>",
+        "<%= countryRecovered[162] %>", "<%= countryDeaths[162] %>");
+      addRow(tbl, "<%= countryName[163] %>", "<%= countryConfirmed[163] %>", "<%= countryActive[163] %>",
+        "<%= countryRecovered[163] %>", "<%= countryDeaths[163] %>");
+      addRow(tbl, "<%= countryName[164] %>", "<%= countryConfirmed[164] %>", "<%= countryActive[164] %>",
+        "<%= countryRecovered[164] %>", "<%= countryDeaths[164] %>");
+      addRow(tbl, "<%= countryName[165] %>", "<%= countryConfirmed[165] %>", "<%= countryActive[165] %>",
+        "<%= countryRecovered[165] %>", "<%= countryDeaths[165] %>");
+      addRow(tbl, "<%= countryName[166] %>", "<%= countryConfirmed[166] %>", "<%= countryActive[166] %>",
+        "<%= countryRecovered[166] %>", "<%= countryDeaths[166] %>");
+      addRow(tbl, "<%= countryName[167] %>", "<%= countryConfirmed[167] %>", "<%= countryActive[167] %>",
+        "<%= countryRecovered[167] %>", "<%= countryDeaths[167] %>");
+      addRow(tbl, "<%= countryName[168] %>", "<%= countryConfirmed[168] %>", "<%= countryActive[168] %>",
+        "<%= countryRecovered[168] %>", "<%= countryDeaths[168] %>");
+      addRow(tbl, "<%= countryName[169] %>", "<%= countryConfirmed[169] %>", "<%= countryActive[169] %>",
+        "<%= countryRecovered[169] %>", "<%= countryDeaths[169] %>");
+      addRow(tbl, "<%= countryName[170] %>", "<%= countryConfirmed[170] %>", "<%= countryActive[170] %>",
+        "<%= countryRecovered[170] %>", "<%= countryDeaths[170] %>");
+      addRow(tbl, "<%= countryName[171] %>", "<%= countryConfirmed[171] %>", "<%= countryActive[171] %>",
+        "<%= countryRecovered[171] %>", "<%= countryDeaths[171] %>");
+      addRow(tbl, "<%= countryName[172] %>", "<%= countryConfirmed[172] %>", "<%= countryActive[172] %>",
+        "<%= countryRecovered[172] %>", "<%= countryDeaths[172] %>");
+      addRow(tbl, "<%= countryName[173] %>", "<%= countryConfirmed[173] %>", "<%= countryActive[173] %>",
+        "<%= countryRecovered[173] %>", "<%= countryDeaths[173] %>");
+      addRow(tbl, "<%= countryName[174] %>", "<%= countryConfirmed[174] %>", "<%= countryActive[174] %>",
+        "<%= countryRecovered[174] %>", "<%= countryDeaths[174] %>");
+      addRow(tbl, "<%= countryName[175] %>", "<%= countryConfirmed[175] %>", "<%= countryActive[175] %>",
+        "<%= countryRecovered[175] %>", "<%= countryDeaths[175] %>");
+      addRow(tbl, "<%= countryName[176] %>", "<%= countryConfirmed[176] %>", "<%= countryActive[176] %>",
+        "<%= countryRecovered[176] %>", "<%= countryDeaths[176] %>");
+      addRow(tbl, "<%= countryName[177] %>", "<%= countryConfirmed[177] %>", "<%= countryActive[177] %>",
+        "<%= countryRecovered[177] %>", "<%= countryDeaths[177] %>");
+      addRow(tbl, "<%= countryName[178] %>", "<%= countryConfirmed[178] %>", "<%= countryActive[178] %>",
+        "<%= countryRecovered[178] %>", "<%= countryDeaths[178] %>");
+      addRow(tbl, "<%= countryName[179] %>", "<%= countryConfirmed[179] %>", "<%= countryActive[179] %>",
+        "<%= countryRecovered[179] %>", "<%= countryDeaths[179] %>");
+      addRow(tbl, "<%= countryName[180] %>", "<%= countryConfirmed[180] %>", "<%= countryActive[180] %>",
+        "<%= countryRecovered[180] %>", "<%= countryDeaths[180] %>");
+      addRow(tbl, "<%= countryName[181] %>", "<%= countryConfirmed[181] %>", "<%= countryActive[181] %>",
+        "<%= countryRecovered[181] %>", "<%= countryDeaths[181] %>");
+      addRow(tbl, "<%= countryName[182] %>", "<%= countryConfirmed[182] %>", "<%= countryActive[182] %>",
+        "<%= countryRecovered[182] %>", "<%= countryDeaths[182] %>");
+      addRow(tbl, "<%= countryName[183] %>", "<%= countryConfirmed[183] %>", "<%= countryActive[183] %>",
+        "<%= countryRecovered[183] %>", "<%= countryDeaths[183] %>");
+      addRow(tbl, "<%= countryName[184] %>", "<%= countryConfirmed[184] %>", "<%= countryActive[184] %>",
+        "<%= countryRecovered[184] %>", "<%= countryDeaths[184] %>");
+    })()
+  </script>
+
+</body>

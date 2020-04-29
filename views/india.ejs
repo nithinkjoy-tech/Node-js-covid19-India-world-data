@@ -1,0 +1,325 @@
+<html>
+<center><h1 class="text-center mb-3 text-primary">Covid19 INDIA</h1></center>
+<center><h3>This is very accurate data which is updated realtime.</h3></center>
+<form action="/" method="GET">
+  <center><button class="btn btn-primary" type="submit">Click to View World data</button> </center>
+</form><br>
+<h4 ><p class="badge badge-pill badge-warning" style="text-align:right;"><b>Updated about <%= lastUpdate %></b>  </p> </h4> 
+<center><h3 class="btn btn-info btn-lg btn-block"">Today's Cases</h3></center>
+<div class="table-responsive-sm">
+  <table class="table table-dark table-sm">
+    <thead>
+      <tr>
+        <th scope="col" class="btn-primary">Confirmed</th>
+        <th scope="col" class="btn-success">Recovered</th>
+        <th scope="col" class="btn-secondary">Deceased</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="col" class="btn-primary"><%= todayConfirmed %></td>
+        <td scope="col" class="btn-success"><%= todayRecovered %></td>
+        <td scope="col" class="btn-secondary"><%= todayDeceased %></td>
+      </tr>
+    </tbody>
+  </table>
+</div><br><br>
+<center><h3 class="btn btn-info btn-lg btn-block"">Total Cases</h3></center>
+<div class="table-responsive-sm">
+  <table class="table table-dark table-sm">
+    <thead>
+      <tr>
+        <th scope="col" class="btn-primary">Confirmed</th>
+        <th scope="col" class="btn-danger">Active</th>
+        <th scope="col" class="btn-success">Recovered</th>
+        <th scope="col" class="btn-secondary">Deceased</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="col" class="btn-primary"><%= stateConfirmedPatient[0] %></td>
+        <td scope="col" class="btn-danger"><%= stateActivePatient[0] %></td>
+        <td scope="col" class="btn-success"><%= stateRecoveredPatient[0] %></td>
+        <td scope="col" class="btn-secondary"><%= stateDeceasedPatient[0] %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br><br>
+<center><h3 class="btn btn-info btn-lg btn-block"">State Wise Cases</h3></center>
+<div class="table-responsive-sm">
+  <table class="table table-dark table-sm">
+    <thead>
+      <tr>
+        <th scope="col">States</th>
+        <th scope="col" class="btn-primary">Confi</th>
+        <th scope="col" class="btn-danger">Act</th>
+        <th scope="col" class="btn-success">Reco</th>
+        <th scope="col" class="btn-secondary">Dece</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th scope="row"><%= states[1] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[1] %></td>
+        <td class="btn-danger"><%= stateActivePatient[1] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[1] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[1] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[2] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[2] %></td>
+        <td class="btn-danger"><%= stateActivePatient[2] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[2] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[2] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[3] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[3] %></td>
+        <td class="btn-danger"><%= stateActivePatient[3] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[3] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[3] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[4] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[4] %></td>
+        <td class="btn-danger"><%= stateActivePatient[4] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[4] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[4] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[5] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[5] %></td>
+        <td class="btn-danger"><%= stateActivePatient[5] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[5] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[5] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[6] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[6] %></td>
+        <td class="btn-danger"><%= stateActivePatient[6] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[6] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[6] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[7] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[7] %></td>
+        <td class="btn-danger"><%= stateActivePatient[7] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[7] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[7] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[8] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[8] %></td>
+        <td class="btn-danger"><%= stateActivePatient[8] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[8] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[8] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[9] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[9] %></td>
+        <td class="btn-danger"><%= stateActivePatient[9] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[9] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[9] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[10] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[10] %></td>
+        <td class="btn-danger"><%= stateActivePatient[10] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[10] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[10] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[11] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[11] %></td>
+        <td class="btn-danger"><%= stateActivePatient[11] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[11] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[11] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[12] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[12] %></td>
+        <td class="btn-danger"><%= stateActivePatient[12] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[12] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[12] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[13] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[13] %></td>
+        <td class="btn-danger"><%= stateActivePatient[13] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[13] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[13] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[14] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[14] %></td>
+        <td class="btn-danger"><%= stateActivePatient[14] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[14] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[14] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[15] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[15] %></td>
+        <td class="btn-danger"><%= stateActivePatient[15] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[15] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[15] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[16] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[16] %></td>
+        <td class="btn-danger"><%= stateActivePatient[16] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[16] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[16] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[17] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[17] %></td>
+        <td class="btn-danger"><%= stateActivePatient[17] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[17] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[17] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[18] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[18] %></td>
+        <td class="btn-danger"><%= stateActivePatient[18] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[18] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[18] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[19] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[19] %></td>
+        <td class="btn-danger"><%= stateActivePatient[19] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[19] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[19] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[20] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[20] %></td>
+        <td class="btn-danger"><%= stateActivePatient[20] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[20] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[20] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[21] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[21] %></td>
+        <td class="btn-danger"><%= stateActivePatient[21] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[21] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[21] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[22] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[22] %></td>
+        <td class="btn-danger"><%= stateActivePatient[22] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[22] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[22] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[23] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[23] %></td>
+        <td class="btn-danger"><%= stateActivePatient[23] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[23] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[23] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[24] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[24] %></td>
+        <td class="btn-danger"><%= stateActivePatient[24] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[24] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[24] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[25] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[25] %></td>
+        <td class="btn-danger"><%= stateActivePatient[25] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[25] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[25] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[26] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[26] %></td>
+        <td class="btn-danger"><%= stateActivePatient[26] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[26] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[26] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[27] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[27] %></td>
+        <td class="btn-danger"><%= stateActivePatient[27] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[27] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[27] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[28] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[28] %></td>
+        <td class="btn-danger"><%= stateActivePatient[28] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[28] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[28] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[29] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[29] %></td>
+        <td class="btn-danger"><%= stateActivePatient[29] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[29] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[29] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[30] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[30] %></td>
+        <td class="btn-danger"><%= stateActivePatient[30] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[30] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[30] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[31] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[31] %></td>
+        <td class="btn-danger"><%= stateActivePatient[31] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[31] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[31] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[32] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[32] %></td>
+        <td class="btn-danger"><%= stateActivePatient[32] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[32] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[32] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[33] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[33] %></td>
+        <td class="btn-danger"><%= stateActivePatient[33] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[33] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[33] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[34] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[34] %></td>
+        <td class="btn-danger"><%= stateActivePatient[34] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[34] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[34] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[35] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[35] %></td>
+        <td class="btn-danger"><%= stateActivePatient[35] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[35] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[35] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[36] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[36] %></td>
+        <td class="btn-danger"><%= stateActivePatient[36] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[36] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[36] %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= states[37] %></th>
+        <td class="btn-primary"><%= stateConfirmedPatient[37] %></td>
+        <td class="btn-danger"><%= stateActivePatient[37] %></td>
+        <td class="btn-success"><%= stateRecoveredPatient[37] %></td>
+        <td class="btn-secondary"><%= stateDeceasedPatient[37] %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</html>
