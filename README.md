@@ -13,4 +13,9 @@ The license for this software is open source, you can reuse this code because th
 
 ## Built with
 
-- <a href="nodejs.org">Node js</a> - The run time environment.
+- <a href="nodejs.org">Node js</a> -The run time environment.
+- <a href="https://www.npmjs.com/package/axios">Axios</a> -Used to request the covid19 api.
+- <a href="https://www.npmjs.com/package/express">Express js</a> -Used to create the server and get the route.
+- <a href="https://www.npmjs.com/package/ejs">EJS</a> -Templating engine.
+- <a href="https://www.npmjs.com/package/express-ejs-layouts">express-ejs-layouts</a> -Used to connect templates.
+- <a href="https://www.npmjs.com/package/moment-timezone">moment-timezone</a> -Used to get present time.
