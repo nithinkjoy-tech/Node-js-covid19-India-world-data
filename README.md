@@ -23,7 +23,7 @@ This project contains covid19 data of both world as well as India. For the live 
 - <a href="https://www.npmjs.com/package/ejs">EJS</a> -Templating engine.
 - <a href="https://www.npmjs.com/package/express-ejs-layouts">express-ejs-layouts</a> -Used to connect templates.
 - <a href="https://www.npmjs.com/package/moment-timezone">moment-timezone</a> -Used to get present time.
-- <a href="https://getbootstrap.com/">moment-timezone</a> -To make web page look better
+- <a href="https://getbootstrap.com/">Bootstrap</a> -To make web page look better
 
 ---
 
