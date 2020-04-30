@@ -58,7 +58,7 @@ This project contains covid19 data of both world as well as India. For the live 
 <table>
   <tr>
     <th>Data</th>
-    <th>URL>/th>
+    <th>URL</th>
   </tr>
   <tr>
     <td>National Level :Time series, State-wise stats and Test counts</td>
@@ -71,13 +71,15 @@ This project contains covid19 data of both world as well as India. For the live 
 <table>
   <tr>
     <th>Data</th>
-    <th>URL>/th>
+    <th>URL</th>
   </tr>
   <tr>
-    <td>The main api</td>
+    <td>The main api of the covid19 world database</td>
     <td>	https://covid19.mathdro.id/api</td>
   </tr>
   </table>
+  
+  ---
 
 ## License
 
