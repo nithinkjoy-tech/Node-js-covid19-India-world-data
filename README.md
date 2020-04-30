@@ -41,7 +41,7 @@ This project contains covid19 data of both world as well as India. For the live 
 
 ## Screenshots
 
-<img src="public/images/pic1.jpg>
+<img src="public/images/pic1.jpg">
 
 ---
 
