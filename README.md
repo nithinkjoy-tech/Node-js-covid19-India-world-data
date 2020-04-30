@@ -80,6 +80,10 @@ This project contains covid19 data of both world as well as India. For the live 
   </table>
   
   ---
+  
+  ## Special thanks
+  
+  My special thanks to @covid19india for inspiring me to make this project and providing the links of api.
 
 ## License
 
