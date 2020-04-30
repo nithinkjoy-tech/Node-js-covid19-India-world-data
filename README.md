@@ -84,7 +84,7 @@ This project contains covid19 data of both world as well as India. For the live 
 ## Special thanks
   
   - My special thanks to <a href="https://github.com/covid19india">@covid19india</a> for inspiring me to make this project and providing the links of api.
-  And also i thank the maintainers of this project 
+  And also i thank the maintainers of https://covid19india.org project 
   - <a href="https://github.com/jeremyphilemon">@jeremyphilemon</a>
   - <a href="https://github.com/shuklaayush">@shuklaayush</a>
   - <a href="https://github.com/JunaidBabu">@JunaidBabu</a>
