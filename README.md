@@ -31,11 +31,17 @@ This project contains covid19 data of both world as well as India. For the live 
 
 - <a href="https://heroku.com">Heroku</a>
 
---
+---
 
 ## App is live at
 
 - http://nkjcovid19.herokuapp.com
+
+---
+
+## Screenshots
+
+<img src="public/images/pic1.jpg>
 
 ---
 
