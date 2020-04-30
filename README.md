@@ -5,9 +5,13 @@ This project contains covid19 data of both world as well as India. For the live 
 
 ---
 
-## License
+##Objective
 
-The license for this software is open source, you can reuse this code because this code is for humanity.
+- Learn the Node js runtime environment
+- Learn about APIs and how they work
+- Create my own REST API
+- Parse JSONs in Node js
+- Enhance practical knowledge of Node js
 
 ---
 
@@ -19,3 +23,7 @@ The license for this software is open source, you can reuse this code because th
 - <a href="https://www.npmjs.com/package/ejs">EJS</a> -Templating engine.
 - <a href="https://www.npmjs.com/package/express-ejs-layouts">express-ejs-layouts</a> -Used to connect templates.
 - <a href="https://www.npmjs.com/package/moment-timezone">moment-timezone</a> -Used to get present time.
+
+## License
+
+The license for this software is open source, you can reuse this code because this code is for humanity.
