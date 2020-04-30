@@ -51,6 +51,34 @@ This project contains covid19 data of both world as well as India. For the live 
 
 ---
 
+## Data sources
+
+### Indian data api
+
+<table>
+  <tr>
+    <th>Data</th>
+    <th>URL>/th>
+  </tr>
+  <tr>
+    <td>National Level :Time series, State-wise stats and Test counts</td>
+    <td>	https://api.covid19india.org/data.json</td>
+  </tr>
+  </table>
+  
+### World data api
+  
+<table>
+  <tr>
+    <th>Data</th>
+    <th>URL>/th>
+  </tr>
+  <tr>
+    <td>The main api</td>
+    <td>	https://covid19.mathdro.id/api</td>
+  </tr>
+  </table>
+
 ## License
 
 The license for this software is open source, you can reuse this code because this code is for humanity.
