@@ -25,6 +25,14 @@ This project contains covid19 data of both world as well as India. For the live 
 - <a href="https://www.npmjs.com/package/moment-timezone">moment-timezone</a> -Used to get present time.
 - <a href="https://getbootstrap.com/">moment-timezone</a> -To make web page look better
 
+---
+
+## Hosted on
+
+- <a href="https://heroku.com">Heroku</a>
+
+---
+
 ## License
 
 The license for this software is open source, you can reuse this code because this code is for humanity.
