@@ -5,6 +5,9 @@ This project contains covid19 data of both world as well as India. For the live 
 
 ---
 
-## Licence
+## License
 
-give to nkj
+The license for this software is open source, you can reuse this code because this code is for humanity.
+
+---
+
