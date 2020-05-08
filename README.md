@@ -1,7 +1,7 @@
 # Node-js-covid19-India-world-data
 
 ## Description
-This project contains covid19 data of both world as well as India. For the live demo visit http://nkjcovid19.herokuapp.com
+This project contains covid19 data of both world as well as India. For the live demo visit http://nkjcovid19.herokuapp.com/india
 
 ---
 
@@ -35,7 +35,7 @@ This project contains covid19 data of both world as well as India. For the live 
 
 ## App is live at
 
-- http://nkjcovid19.herokuapp.com
+- http://nkjcovid19.herokuapp.com/india
 
 ---
 
